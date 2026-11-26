@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #151515;
+  background: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #ffffff;
+  color: #151515;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+::selection {
+  background: #eaf7ee;
+  color: #151515;
+}
+
+.agent-surface {
+  background-color: #f4f1ea;
+  background-image: radial-gradient(#e3ddd0 0.7px, transparent 0.7px);
+  background-size: 16px 16px;
+}
+
+.nav-link {
+  position: relative;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -18px;
+  height: 2px;
+  background: transparent;
+}
+
+.nav-link[data-active="true"]::after {
+  background: #16a34a;
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  opacity: 0.72;
+}
+
+.nav-link[data-active="true"]:hover {
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
